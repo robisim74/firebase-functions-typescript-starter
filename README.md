@@ -1,0 +1,1 @@
+# firebase-functions-typescript-starter
