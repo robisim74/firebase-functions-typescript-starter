@@ -1,9 +1,5 @@
 /**
  * Add here external dependencies that actually you use.
- * 
- * Also, if the dependency uses CommonJS modules,
- * you should also use a plugin like rollup-plugin-commonjs,
- * to explicitly specify unresolvable "named exports".
  */
 const externals = [
     'cors',

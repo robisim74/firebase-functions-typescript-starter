@@ -10,7 +10,7 @@ const whitelist: string[] = [
 const options: _cors.CorsOptions = {
     origin: whitelist
 };
-const cors = _cors; // Workaround for Rollup.
+const cors = _cors;
 
 /**
  * Analysis function.
