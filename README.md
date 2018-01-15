@@ -79,11 +79,11 @@ npm run deploy
 
 2. Bundling with _Rollup_
 
-    _Firebase Cloud Functions_ does not require the deployment of a single bundle. In any case the building with rollup offers some advantages:
-    * Tree shaking of unused code
+    _Firebase Cloud Functions_ does not require the deployment of a single bundle. In any case the building with _Rollup_ offers some advantages:
+    * _Tree shaking_ of unused code
     * No request for other files at runtime
     
-    Since _Rollup_ requires the _es2015_ modules, _tsc_ compiler is first performed using `tsconfig-build.js` with _es2015_ modules
+    Since _Rollup_ requires the _es2015_ modules, _tsc_ compilation is first performed using `tsconfig-build.js` with _es2015_ modules.
 
 ## License
 MIT
