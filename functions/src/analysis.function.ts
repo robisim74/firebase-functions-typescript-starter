@@ -10,7 +10,8 @@ export function analysisFunction(request, response): void {
     let result: any;
 
     try {
-        const average = Average.getInstance(
+        const average = Average.getInstance();
+        average.calculate(
             data.values
         );
 
