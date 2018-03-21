@@ -1,4 +1,4 @@
-import { Average } from './models/average';
+import { calcAverage } from './models/average';
 
 /**
  * Analysis function.
@@ -10,12 +10,11 @@ export function analysisFunction(request, response): void {
     let result: any;
 
     try {
-        const average = Average.getInstance();
-        average.calculate(
+        const average: number = calcAverage(
             data.values
         );
 
-        result = JSON.stringify({ average: average.value });
+        result = JSON.stringify({ average });
 
     } catch (error) {
         result = error;
