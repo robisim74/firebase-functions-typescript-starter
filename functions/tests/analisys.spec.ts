@@ -11,6 +11,9 @@ import { analysisFunction } from '../src/analysis.function';
 
 use(sinonChai);
 
+import * as _test from 'firebase-functions-test';
+const test = _test();
+
 describe('Analysis', () => {
 
     it('should make the analysis', () => {
