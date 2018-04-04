@@ -9,7 +9,7 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "lint": "tslint -p tslint.json src/**/*.ts' -e tests/**/*.ts",
+    "lint": "tslint -p tsconfig.json src/**/*.ts -e tests/**/*.ts",
     "test": "mocha -r ts-node/register tests/**/*.spec.ts"
   },
   "main": "lib/index.js",
