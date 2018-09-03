@@ -27,6 +27,18 @@
         ]
       }
     ],
+    "no-console": [
+      true,
+      "debug",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "no-inferrable-types": [
+      true,
+      "ignore-params",
+      "ignore-properties"
+    ],
     "ordered-imports": [
       false
     ],
@@ -42,6 +54,7 @@
     "typedef": [
       true,
       "call-signature",
+      "parameter",
       "property-declaration",
       "member-variable-declaration"
     ],
