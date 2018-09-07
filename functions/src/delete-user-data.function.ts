@@ -5,7 +5,6 @@ import * as admin from 'firebase-admin';
  */
 export async function deleteUserDataFunction(user: admin.auth.UserRecord): Promise<void> {
     const db = admin.firestore();
-    db.settings({ timestampsInSnapshots: true });
 
     // Gets user id.
     const uid = user.uid;

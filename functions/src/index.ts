@@ -15,6 +15,10 @@ const cors = _cors;
 // Initializes Cloud Functions.
 admin.initializeApp(functions.config().firebase);
 
+// Firestore settings.
+const db = admin.firestore();
+db.settings({ timestampsInSnapshots: true });
+
 /**
  * Trigger a function with an HTTP request.
  */
