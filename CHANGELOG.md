@@ -1,5 +1,9 @@
 ## Firebase Functions TypeScript starter Changelog
 
+<a name="Aug 18, 2020"></a>
+### Aug 18, 2020
+* Upgrade packages, and add emulators only for functions
+
 <a name="Sep 3, 2018"></a>
 ### Sep 3, 2018
 * Upgrade packages and add an auth function sample

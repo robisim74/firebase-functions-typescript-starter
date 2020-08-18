@@ -41,8 +41,6 @@ The following command runs unit tests using _Mocha_ that are in the `tests` fold
 ```Shell
 npm test 
 ```
-For the other supported tests, please refer to the official documentation: [
-Run Functions Locally](https://firebase.google.com/docs/functions/local-emulator)
 
 ## <a name="4"></a>4 Building
 
@@ -52,7 +50,10 @@ The following command:
 npm run serve:dev
 ```
 - starts _tsc_ compiler with _watch_ option
-- starts the emulator _firebase serve --only functions_
+- starts the emulator _firebase emulators:start --only functions_
+
+For the other supported emulators, please refer to the official documentation: [
+Run Functions Locally](https://firebase.google.com/docs/functions/local-emulator)
 
 #### Production
 

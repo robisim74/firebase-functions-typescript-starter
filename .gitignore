@@ -1,3 +1,4 @@
 # Functions
 /functions/node_modules
 /functions/lib
+/functions/*.log
