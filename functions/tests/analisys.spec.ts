@@ -6,7 +6,7 @@ import { use, expect } from 'chai';
 // Standalone test spies, stubs and mocks.
 import * as sinon from 'sinon';
 // Extends Chai with assertions for the Sinon.JS 
-import * as sinonChai from 'sinon-chai';
+import sinonChai from 'sinon-chai';
 
 import { analysisFunction } from '../src/analysis.function';
 

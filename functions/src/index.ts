@@ -1,14 +1,13 @@
 import * as functions from 'firebase-functions';
-import * as _cors from 'cors';
+import cors from 'cors';
 
 import { analysisFunction } from './analysis.function';
 import { functionsConfig } from './functions-config';
 
 // CORS configuration.
-const options: _cors.CorsOptions = {
+const options: cors.CorsOptions = {
     origin: functionsConfig.whitelist
 };
-const cors = _cors;
 
 /**
  * Trigger a function with an HTTP request.
