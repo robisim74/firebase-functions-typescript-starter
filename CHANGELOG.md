@@ -4,7 +4,8 @@
 ### Dec 8, 2021
 * Upgrade to Node.js 16
 * Switch to ES Modules
->Note: CommonJS version is stil this [branch](https://github.com/robisim74/firebase-functions-typescript-starter/tree/commonjs) 
+
+    >Note: CommonJS version is still in this [branch](https://github.com/robisim74/firebase-functions-typescript-starter/tree/commonjs) 
 * Switch to ESLint
 
 <a name="Aug 18, 2020"></a>
