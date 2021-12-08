@@ -23,6 +23,7 @@ Get the [Changelog](https://github.com/robisim74/firebase-functions-typescript-s
     - **rollup.config.js** _Rollup_ configuration for building the ES bundle
     - **tsconfig.json** _TypeScript_ compiler options
     - **.mocharc.json** _Mocha_ options
+    - **.eslintrc.json** _ESLint_ configuration
 - **.firebaserc**: Firebase projects
 
 ## <a name="2"></a>2 Customizing
@@ -30,7 +31,7 @@ Get the [Changelog](https://github.com/robisim74/firebase-functions-typescript-s
 
 2. Update `.firebaserc` with your `project-id`.
 
-3. Add your Firebase Functions to `index.ts`, and create different files for each one.
+3. Add your Firebase Functions to `index.ts` and create different files for each one.
 
 4. Update in `rollup.config.js` file external dependencies with those that actually you use to build the ES bundle.
 
@@ -75,17 +76,17 @@ npm run deploy
 ```
 
 ## <a name="6"></a>6 What it is important to know
-1. Node.js
+1. _Node.js_
 
     The engine in `package.json` is set to _Node.js 16_ 
 
-2. ES modules
+2. ES Modules
 
-    _Node.js 16_ supports ES modules: so you have `"type": "module"` in `package.json`, `format: 'es'` in `rollup.config.js` and `tsconfig.js` used by _tsc_ compiler targets ES2021 with ES2020 modules
+    _Node.js 16_ supports ES Modules: so you have `"type": "module"` in `package.json`, `format: 'es'` in `rollup.config.js` and `tsconfig.js` used by _tsc_ compiler targets ES2021 with ES2020 modules
 
 3. Bundling with _Rollup_
 
-    _Firebase Cloud Functions_ does not require the deployment of a single bundle. In any case the building with _Rollup_ offers some advantages:
+    _Firebase Cloud Functions_ do not require the deployment of a single bundle. In any case the building with _Rollup_ offers some advantages:
     * _Tree shaking_ of unused code
     * No request for other files at runtime
 

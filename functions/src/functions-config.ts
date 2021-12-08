@@ -3,6 +3,6 @@
  */
 export const functionsConfig = {
     whitelist: [
-        'http://localhost:4000'
+        'http://localhost:4200'
     ]
 };

@@ -1,5 +1,12 @@
 ## Firebase Functions TypeScript starter Changelog
 
+<a name="Dec 8, 2021"></a>
+### Dec 8, 2021
+* Upgrade to Node.js 16
+* Switch to ES Modules
+>Note: CommonJS version is stil this [branch](https://github.com/robisim74/firebase-functions-typescript-starter/tree/commonjs) 
+* Switch to ESLint
+
 <a name="Aug 18, 2020"></a>
 ### Aug 18, 2020
 * Upgrade packages, and add emulators only for functions

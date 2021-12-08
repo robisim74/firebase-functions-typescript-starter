@@ -1,4 +1,3 @@
-/* tslint:disable */
 // Test framework.
 import 'mocha';
 // Assertion library.
