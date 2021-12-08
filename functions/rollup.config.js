@@ -1,4 +1,5 @@
-import resolve from 'rollup-plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import nodeResolve from '@rollup/plugin-node-resolve';
 
 /**
  * Add here external dependencies that actually you use.
@@ -10,13 +11,16 @@ const externals = [
 ];
 
 export default {
-    input: 'tmp/index.js',
+    input: 'src/index.ts',
     external: externals,
-    plugins: [resolve()],
+    plugins: [
+        typescript(),
+        nodeResolve()
+    ],
     onwarn: () => { return },
     output: {
         file: 'lib/index.js',
-        format: 'cjs',
+        format: 'es',
         sourcemap: false
     }
 }

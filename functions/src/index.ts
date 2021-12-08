@@ -1,8 +1,8 @@
 import * as functions from 'firebase-functions';
 import cors from 'cors';
 
-import { analysisFunction } from './analysis.function';
-import { functionsConfig } from './functions-config';
+import { analysisFunction } from './analysis.function.js';
+import { functionsConfig } from './functions-config.js';
 
 // CORS configuration.
 const options: cors.CorsOptions = {

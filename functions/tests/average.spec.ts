@@ -1,7 +1,7 @@
 import 'mocha';
 import { expect } from 'chai';
 
-import { calcAverage } from '../src/models/average';
+import { calcAverage } from '../src/models/average.js';
 
 describe('Average', () => {
 

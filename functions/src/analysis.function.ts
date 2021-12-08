@@ -1,9 +1,11 @@
-import { calcAverage } from './models/average';
+import * as functions from 'firebase-functions';
+
+import { calcAverage } from './models/average.js';
 
 /**
  * Analysis function.
  */
-export function analysisFunction(request: any, response: any): void {
+export function analysisFunction(request: functions.Request, response: functions.Response): void {
     const data: { values: number[] } = request.body;
 
     try {

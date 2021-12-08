@@ -1,8 +1,8 @@
 # Firebase Functions TypeScript starter
 
->Create & test Firebase Cloud Functions in TypeScript.
+>Create & test Firebase Cloud Functions in TypeScript
 
-This starter allows you to create & test **Firebase Cloud Functions** in TypeScript.
+This starter allows you to create & test **Firebase Cloud Functions** in _TypeScript_.
 
 Get the [Changelog](https://github.com/robisim74/firebase-functions-typescript-starter/blob/master/CHANGELOG.md).
 
@@ -20,9 +20,9 @@ Get the [Changelog](https://github.com/robisim74/firebase-functions-typescript-s
         - **index.ts** entry point for all your Firebase Functions
     - **tests** folder for the _Mocha_ tests
     - **package.json** _npm_ options
-    - **rollup.config.js** _Rollup_ configuration for building the _cjs_ bundle
-    - **tsconfig.json** _tsc_ compiler options
-    - **tsconfig-build.json** _tsc_ compiler options for production
+    - **rollup.config.js** _Rollup_ configuration for building the ES bundle
+    - **tsconfig.json** _TypeScript_ compiler options
+    - **.mocharc.json** _Mocha_ options
 - **.firebaserc**: Firebase projects
 
 ## <a name="2"></a>2 Customizing
@@ -32,7 +32,7 @@ Get the [Changelog](https://github.com/robisim74/firebase-functions-typescript-s
 
 3. Add your Firebase Functions to `index.ts`, and create different files for each one.
 
-4. Update in `rollup.config.js` file external dependencies with those that actually you use to build the _cjs_ bundle.
+4. Update in `rollup.config.js` file external dependencies with those that actually you use to build the ES bundle.
 
 5. Create unit tests in `tests` folder.
 
@@ -43,25 +43,26 @@ npm test
 ```
 
 ## <a name="4"></a>4 Building
-
 #### Development
-The following command:
+Start _tsc_ compiler with _watch_ option:
+```Shell
+npm run build:dev
+```
+
+Start the emulator _firebase emulators:start --only functions_
 ```Shell
 npm run serve:dev
 ```
-- starts _tsc_ compiler with _watch_ option
-- starts the emulator _firebase emulators:start --only functions_
 
 For the other supported emulators, please refer to the official documentation: [
 Run Functions Locally](https://firebase.google.com/docs/functions/local-emulator)
 
 #### Production
-
 The following command:
 ```Shell
 npm run build
 ```
-- creates `lib` folder with the file of distribution:
+creates `lib` folder with the file of distribution:
 ```
 └── functions
     └──lib
@@ -74,17 +75,19 @@ npm run deploy
 ```
 
 ## <a name="6"></a>6 What it is important to know
-1. `commonjs` modules
+1. Node.js
 
-    _NodeJs_ used by _Firebase Cloud Functions_ only supports _commonjs_ modules: so the `tsconfig.js` used by _tsc_ compiler targets _es2015_ with _commonjs_ modules
+    The engine in `package.json` is set to _Node.js 16_ 
 
-2. Bundling with _Rollup_
+2. ES modules
+
+    _Node.js 16_ supports ES modules: so you have `"type": "module"` in `package.json`, `format: 'es'` in `rollup.config.js` and `tsconfig.js` used by _tsc_ compiler targets ES2021 with ES2020 modules
+
+3. Bundling with _Rollup_
 
     _Firebase Cloud Functions_ does not require the deployment of a single bundle. In any case the building with _Rollup_ offers some advantages:
     * _Tree shaking_ of unused code
     * No request for other files at runtime
-    
-    Since _Rollup_ requires the _es2015_ modules, _tsc_ compilation is first performed using `tsconfig-build.js` with _es2015_ modules.
 
 ## License
 MIT

@@ -8,7 +8,7 @@ import * as sinon from 'sinon';
 // Extends Chai with assertions for the Sinon.JS 
 import sinonChai from 'sinon-chai';
 
-import { analysisFunction } from '../src/analysis.function';
+import { analysisFunction } from '../src/analysis.function.js';
 
 use(sinonChai);
 
@@ -19,11 +19,11 @@ describe('Analysis', () => {
             body: {
                 values: [1.62, 2.57, 3.75, 4.41, 5.13, 5.32, 5.49, 4.82, 3.72, 2.45, 1.63, 1.32, 3.52]
             }
-        };
+        } as any;
         const res = {
-            send: (s) => { },
-            status: (s) => { this.statusCode = s; return this; }
-        };
+            send: () => { },
+            status: () => { }
+        } as any;
 
         // sinon.spy(object, "method") creates a spy that wraps the existing function.
         const spy = sinon.spy(res, "send");
